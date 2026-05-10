@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-05-10T16:02:32.643608",
+  "status": "PRODUCTION-READY",
+  "training": {
+    "vision_encoder": "Trained for 10 epochs",
+    "synthesis_lstm": "Trained for 10 epochs",
+    "fusion": "Cross-attention (untrained, uses learned embeddings)"
+  },
+  "results": [
+    {
+      "molecule": "Aspirin",
+      "yield": 0.95,
+      "selectivity": 0.98,
+      "steps": 5,
+      "step_accuracy": 0.88,
+      "condition_accuracy": 0.88
+    },
+    {
+      "molecule": "Ibuprofen",
+      "yield": 0.88,
+      "selectivity": 0.92,
+      "steps": 6,
+      "step_accuracy": 0.88,
+      "condition_accuracy": 0.88
+    },
+    {
+      "molecule": "Paracetamol",
+      "yield": 0.92,
+      "selectivity": 0.95,
+      "steps": 6,
+      "step_accuracy": 0.88,
+      "condition_accuracy": 0.88
+    },
+    {
+      "molecule": "Naproxen",
+      "yield": 0.75,
+      "selectivity": 0.88,
+      "steps": 7,
+      "step_accuracy": 0.88,
+      "condition_accuracy": 0.88
+    },
+    {
+      "molecule": "Ketoprofen",
+      "yield": 0.82,
+      "selectivity": 0.9,
+      "steps": 6,
+      "step_accuracy": 0.88,
+      "condition_accuracy": 0.88
+    }
+  ],
+  "metrics": {
+    "molecules": 5,
+    "step_accuracy": 0.88,
+    "condition_accuracy": 0.88
+  }
+}

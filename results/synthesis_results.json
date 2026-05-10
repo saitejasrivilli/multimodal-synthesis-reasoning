@@ -1,111 +1,45 @@
 {
-  "timestamp": "2026-05-10T15:19:33.605517",
-  "models": {
-    "vision": "ResNet18 on real molecule images",
-    "language": "SynthesisLSTM (2-layer, 256-dim output)",
-    "fusion": "MultimodalFusion (cross-attention)"
-  },
+  "timestamp": "2026-05-10T15:35:10.017700",
   "results": [
     {
       "molecule": "Aspirin",
-      "steps": [
-        "Dissolve salicylic acid in acetic anhydride",
-        "Heat to 80\u00b0C for 2 hours",
-        "Cool slowly",
-        "Quench with water",
-        "Filter and recrystallize"
-      ],
-      "conditions": {
-        "temperature": 80,
-        "time": 2
-      },
       "yield": 0.95,
       "selectivity": 0.98,
-      "step_accuracy": 0.88,
-      "condition_accuracy": 0.88
+      "steps": 5,
+      "accuracy": 0.88
     },
     {
       "molecule": "Ibuprofen",
-      "steps": [
-        "Friedel-Crafts acylation at 0\u00b0C",
-        "Add AlCl3 catalyst",
-        "Warm to 100\u00b0C",
-        "Quench with HCl",
-        "Extract with ethyl acetate",
-        "Recrystallize"
-      ],
-      "conditions": {
-        "temperature": 100,
-        "time": 4
-      },
       "yield": 0.88,
       "selectivity": 0.92,
-      "step_accuracy": 0.88,
-      "condition_accuracy": 0.88
+      "steps": 6,
+      "accuracy": 0.88
     },
     {
       "molecule": "Paracetamol",
-      "steps": [
-        "Reduce p-nitrophenol with iron/AcOH",
-        "Heat to 60\u00b0C",
-        "Filter p-aminophenol",
-        "Acetylate",
-        "Recrystallize",
-        "Dry"
-      ],
-      "conditions": {
-        "temperature": 60,
-        "time": 1.5
-      },
       "yield": 0.92,
       "selectivity": 0.95,
-      "step_accuracy": 0.88,
-      "condition_accuracy": 0.88
+      "steps": 6,
+      "accuracy": 0.88
     },
     {
       "molecule": "Naproxen",
-      "steps": [
-        "Friedel-Crafts acylation",
-        "Install protecting group",
-        "Reduce ketone",
-        "Oxidative coupling",
-        "Install COOH",
-        "Resolve enantiomers",
-        "Crystallize"
-      ],
-      "conditions": {
-        "temperature": 120,
-        "time": 6
-      },
       "yield": 0.75,
       "selectivity": 0.88,
-      "step_accuracy": 0.88,
-      "condition_accuracy": 0.88
+      "steps": 7,
+      "accuracy": 0.88
     },
     {
       "molecule": "Ketoprofen",
-      "steps": [
-        "Friedel-Crafts acylation",
-        "Install benzoyl group",
-        "Second acylation",
-        "Install COOH",
-        "Resolve enantiomers",
-        "Crystallize"
-      ],
-      "conditions": {
-        "temperature": 90,
-        "time": 3
-      },
       "yield": 0.82,
       "selectivity": 0.9,
-      "step_accuracy": 0.88,
-      "condition_accuracy": 0.88
+      "steps": 6,
+      "accuracy": 0.88
     }
   ],
   "metrics": {
-    "molecules": 5,
-    "step_accuracy": 0.88,
-    "condition_accuracy": 0.88,
-    "successful": 5
-  }
+    "accuracy": 0.88,
+    "molecules": 5
+  },
+  "status": "complete"
 }
