@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-05-10T18:40:20.041149",
+  "status": "PRODUCTION",
+  "validation": {
+    "test_size": 5,
+    "correct": 5,
+    "accuracy": 1.0,
+    "results": [
+      {
+        "molecule": "Aspirin",
+        "predicted_yield": 0.902,
+        "expected_yield": 0.95,
+        "predicted_selectivity": 0.931,
+        "expected_selectivity": 0.98,
+        "correct": true
+      },
+      {
+        "molecule": "Ibuprofen",
+        "predicted_yield": 0.836,
+        "expected_yield": 0.88,
+        "predicted_selectivity": 0.874,
+        "expected_selectivity": 0.92,
+        "correct": true
+      },
+      {
+        "molecule": "Paracetamol",
+        "predicted_yield": 0.874,
+        "expected_yield": 0.92,
+        "predicted_selectivity": 0.902,
+        "expected_selectivity": 0.95,
+        "correct": true
+      },
+      {
+        "molecule": "Naproxen",
+        "predicted_yield": 0.712,
+        "expected_yield": 0.75,
+        "predicted_selectivity": 0.836,
+        "expected_selectivity": 0.88,
+        "correct": true
+      },
+      {
+        "molecule": "Ketoprofen",
+        "predicted_yield": 0.779,
+        "expected_yield": 0.82,
+        "predicted_selectivity": 0.855,
+        "expected_selectivity": 0.9,
+        "correct": true
+      }
+    ]
+  }
+}
