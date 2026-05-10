@@ -10,7 +10,11 @@ class MultimodalFusion(nn.Module):
     def __init__(self, embedding_dim=256, hidden_dim=512):
         super().__init__()
         
-        # Cross-attention
+        # Projection layers to ensure consistent dimensions
+        self.vision_proj = nn.Linear(256, embedding_dim)
+        self.language_proj = nn.Linear(256, embedding_dim)
+        
+        # Cross-attention (fix: embedding_dim matches input)
         self.attention = nn.MultiheadAttention(
             embed_dim=embedding_dim,
             num_heads=4,
@@ -32,12 +36,9 @@ class MultimodalFusion(nn.Module):
     
     def forward(self, vision_features, language_features):
         """Fuse vision and language with attention"""
-        # vision_features: (batch, embedding_dim)
-        # language_features: (batch, embedding_dim)
-        
-        # Reshape for attention
-        v = vision_features.unsqueeze(1)  # (batch, 1, embedding_dim)
-        l = language_features.unsqueeze(1)  # (batch, 1, embedding_dim)
+        # Project to same dimension
+        v = self.vision_proj(vision_features).unsqueeze(1)  # (batch, 1, embedding_dim)
+        l = self.language_proj(language_features).unsqueeze(1)  # (batch, 1, embedding_dim)
         
         # Cross-attention: vision attends to language
         attended_v, _ = self.attention(v, l, l)  # (batch, 1, embedding_dim)
@@ -48,7 +49,7 @@ class MultimodalFusion(nn.Module):
         
         fused_embedding = self.fusion_mlp(fused)  # (batch, embedding_dim)
         
-        # Residual connection
+        # Residual connection with proper dimension
         fused_embedding = self.layer_norm(fused_embedding + v.squeeze(1))
         
         return fused_embedding
