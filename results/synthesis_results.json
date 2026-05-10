@@ -1,0 +1,118 @@
+{
+  "timestamp": "2026-05-10T03:28:35.874900",
+  "molecules_tested": 5,
+  "molecules": [
+    "Ketoprofen",
+    "Aspirin",
+    "Paracetamol",
+    "Ibuprofen",
+    "Naproxen"
+  ],
+  "evaluation": {
+    "total_molecules": 5,
+    "step_accuracy": 0.8799999999999999,
+    "condition_accuracy": 0.8800000000000001,
+    "yield_prediction_error": 0.08599999999999997,
+    "successful_predictions": 5
+  },
+  "predictions": [
+    {
+      "molecule": "Ketoprofen",
+      "steps": [
+        "Friedel-Crafts acylation of benzene derivative",
+        "Install benzoyl group",
+        "Friedel-Crafts acylation with propionic anhydride",
+        "Hydrogenation to remove protecting group",
+        "Acidify and crystallize"
+      ],
+      "conditions": {
+        "temperature": 90,
+        "time": 3,
+        "solvent": "benzene"
+      },
+      "yield": 0.82,
+      "selectivity": 0.9,
+      "safety_notes": "Moderate risk",
+      "confidence": 0.92
+    },
+    {
+      "molecule": "Aspirin",
+      "steps": [
+        "Dissolve salicylic acid in acetic anhydride",
+        "Heat to 80\u00b0C for 2 hours with constant stirring",
+        "Cool to room temperature slowly",
+        "Add water dropwise to quench excess anhydride",
+        "Filter white crystals and recrystallize from hot water"
+      ],
+      "conditions": {
+        "temperature": 80,
+        "time": 2,
+        "solvent": "acetic_anhydride"
+      },
+      "yield": 0.95,
+      "selectivity": 0.98,
+      "safety_notes": "Low risk - monitor temperature",
+      "confidence": 0.92
+    },
+    {
+      "molecule": "Paracetamol",
+      "steps": [
+        "Reduce p-nitrophenol with iron powder in acetic acid",
+        "Heat to 60\u00b0C for 1.5 hours",
+        "Filter to isolate p-aminophenol",
+        "Acetylate with acetic anhydride",
+        "Cool and recrystallize from hot water",
+        "Filter and dry under vacuum"
+      ],
+      "conditions": {
+        "temperature": 60,
+        "time": 1.5,
+        "solvent": "water"
+      },
+      "yield": 0.92,
+      "selectivity": 0.95,
+      "safety_notes": "Low risk - but use gloves",
+      "confidence": 0.92
+    },
+    {
+      "molecule": "Ibuprofen",
+      "steps": [
+        "Perform Friedel-Crafts acylation of 4-isobutylbenzene",
+        "Add propanoic anhydride at 0\u00b0C with AlCl3 catalyst",
+        "Warm to 100\u00b0C over 4 hours",
+        "Quench with water and HCl",
+        "Extract with ethyl acetate",
+        "Recrystallize from ethanol"
+      ],
+      "conditions": {
+        "temperature": 100,
+        "time": 4,
+        "solvent": "ether"
+      },
+      "yield": 0.88,
+      "selectivity": 0.92,
+      "safety_notes": "Moderate risk - toxic fumes",
+      "confidence": 0.92
+    },
+    {
+      "molecule": "Naproxen",
+      "steps": [
+        "Perform Friedel-Crafts acylation",
+        "Reduce ketone to secondary alcohol",
+        "Oxidative coupling",
+        "Install carboxylic acid",
+        "Resolve enantiomers via diastereomeric salt",
+        "Crystallize S-enantiomer"
+      ],
+      "conditions": {
+        "temperature": 120,
+        "time": 6,
+        "solvent": "DMF"
+      },
+      "yield": 0.75,
+      "selectivity": 0.88,
+      "safety_notes": "High risk - multiple steps",
+      "confidence": 0.92
+    }
+  ]
+}
