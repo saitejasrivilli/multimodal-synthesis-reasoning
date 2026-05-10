@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T15:04:46.503907",
+  "timestamp": "2026-05-10T15:19:33.605517",
   "models": {
     "vision": "ResNet18 on real molecule images",
     "language": "SynthesisLSTM (2-layer, 256-dim output)",
