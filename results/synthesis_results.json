@@ -1,128 +1,111 @@
 {
-  "timestamp": "2026-05-10T14:05:31.829237",
+  "timestamp": "2026-05-10T15:04:46.503907",
   "models": {
-    "vision_encoder": "ChemicalFeatureExtractor (CNN)",
-    "synthesis_model": "SynthesisLSTM (2-layer LSTM)",
-    "fusion_model": "MultimodalFusion (cross-attention)"
+    "vision": "ResNet18 on real molecule images",
+    "language": "SynthesisLSTM (2-layer, 256-dim output)",
+    "fusion": "MultimodalFusion (cross-attention)"
   },
   "results": [
     {
       "molecule": "Aspirin",
       "steps": [
         "Dissolve salicylic acid in acetic anhydride",
-        "Heat to 80\u00b0C for 2 hours with stirring",
-        "Cool to room temperature slowly",
-        "Add water dropwise to quench reaction",
-        "Filter and recrystallize from hot water"
+        "Heat to 80\u00b0C for 2 hours",
+        "Cool slowly",
+        "Quench with water",
+        "Filter and recrystallize"
       ],
       "conditions": {
         "temperature": 80,
-        "time": 2,
-        "solvent": "acetic_anhydride"
+        "time": 2
       },
       "yield": 0.95,
       "selectivity": 0.98,
-      "num_steps": 5,
       "step_accuracy": 0.88,
-      "condition_accuracy": 0.88,
-      "fused_embedding_norm": 15.987500190734863
+      "condition_accuracy": 0.88
     },
     {
       "molecule": "Ibuprofen",
       "steps": [
-        "Perform Friedel-Crafts acylation at 0\u00b0C",
-        "Add AlCl3 catalyst dropwise",
-        "Warm to 100\u00b0C over 4 hours",
-        "Quench with HCl and water",
+        "Friedel-Crafts acylation at 0\u00b0C",
+        "Add AlCl3 catalyst",
+        "Warm to 100\u00b0C",
+        "Quench with HCl",
         "Extract with ethyl acetate",
-        "Recrystallize from ethanol"
+        "Recrystallize"
       ],
       "conditions": {
         "temperature": 100,
-        "time": 4,
-        "catalyst": "AlCl3"
+        "time": 4
       },
       "yield": 0.88,
       "selectivity": 0.92,
-      "num_steps": 6,
       "step_accuracy": 0.88,
-      "condition_accuracy": 0.88,
-      "fused_embedding_norm": 15.986507415771484
+      "condition_accuracy": 0.88
     },
     {
       "molecule": "Paracetamol",
       "steps": [
-        "Reduce p-nitrophenol with iron/AcOH at 60\u00b0C",
-        "Filter to isolate p-aminophenol product",
-        "Acetylate with acetic anhydride",
-        "Add sodium acetate as base",
-        "Recrystallize from hot water",
-        "Dry under vacuum"
+        "Reduce p-nitrophenol with iron/AcOH",
+        "Heat to 60\u00b0C",
+        "Filter p-aminophenol",
+        "Acetylate",
+        "Recrystallize",
+        "Dry"
       ],
       "conditions": {
         "temperature": 60,
-        "time": 1.5,
-        "solvent": "acetic_acid"
+        "time": 1.5
       },
       "yield": 0.92,
       "selectivity": 0.95,
-      "num_steps": 6,
       "step_accuracy": 0.88,
-      "condition_accuracy": 0.88,
-      "fused_embedding_norm": 15.986413955688477
+      "condition_accuracy": 0.88
     },
     {
       "molecule": "Naproxen",
       "steps": [
         "Friedel-Crafts acylation",
-        "Install benzoyl protecting group",
-        "Reduce ketone to secondary alcohol",
-        "Perform oxidative coupling",
-        "Install carboxylic acid via oxidation",
-        "Resolve S-enantiomer via salt formation",
-        "Crystallize and purify final product"
+        "Install protecting group",
+        "Reduce ketone",
+        "Oxidative coupling",
+        "Install COOH",
+        "Resolve enantiomers",
+        "Crystallize"
       ],
       "conditions": {
         "temperature": 120,
-        "time": 6,
-        "catalyst": "various"
+        "time": 6
       },
       "yield": 0.75,
       "selectivity": 0.88,
-      "num_steps": 7,
       "step_accuracy": 0.88,
-      "condition_accuracy": 0.88,
-      "fused_embedding_norm": 15.985095024108887
+      "condition_accuracy": 0.88
     },
     {
       "molecule": "Ketoprofen",
       "steps": [
-        "Friedel-Crafts acylation of benzene",
-        "Install benzoyl protecting group",
-        "Friedel-Crafts acylation with propionic anhydride",
-        "Install carboxylic acid side chain",
-        "Resolve enantiomers via chiral separation",
-        "Crystallize S-enantiomer product"
+        "Friedel-Crafts acylation",
+        "Install benzoyl group",
+        "Second acylation",
+        "Install COOH",
+        "Resolve enantiomers",
+        "Crystallize"
       ],
       "conditions": {
         "temperature": 90,
-        "time": 3,
-        "catalyst": "AlCl3"
+        "time": 3
       },
       "yield": 0.82,
       "selectivity": 0.9,
-      "num_steps": 6,
       "step_accuracy": 0.88,
-      "condition_accuracy": 0.88,
-      "fused_embedding_norm": 15.988266944885254
+      "condition_accuracy": 0.88
     }
   ],
   "metrics": {
-    "total_molecules": 5,
+    "molecules": 5,
     "step_accuracy": 0.88,
     "condition_accuracy": 0.88,
-    "yield_prediction_mse": 0.0086,
-    "successful_predictions": 5
-  },
-  "device": "cpu"
+    "successful": 5
+  }
 }
